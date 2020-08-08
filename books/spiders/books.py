@@ -3,10 +3,10 @@ import scrapy
 
 
 class BooksSpider(scrapy.Spider):
-    name = "books"
-    allowed_domains = ["books.toscrape.com"]
+    name = "coiffeurvergleich"
+    allowed_domains = ["www.coiffeurvergleich.ch"]
     start_urls = [
-        'http://books.toscrape.com/',
+        'https://www.coiffeurvergleich.ch/coiffeur.php?p=10&geschlecht=0',
     ]
 
     def parse(self, response):
