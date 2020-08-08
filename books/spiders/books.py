@@ -818,7 +818,7 @@ class BooksSpider(scrapy.Spider):
 ,'https://coiffeursearch.ch/index.php?L=0&type=999&tx_klinkcosumitglieder_ajax[controller]=Salon&tx_klinkcosumitglieder_ajax[action]=detailjson&tx_klinkcosumitglieder_ajax[mitglied_id]=24493'
 ,'https://coiffeursearch.ch/index.php?L=0&type=999&tx_klinkcosumitglieder_ajax[controller]=Salon&tx_klinkcosumitglieder_ajax[action]=detailjson&tx_klinkcosumitglieder_ajax[mitglied_id]=4270'
 ,'https://coiffeursearch.ch/index.php?L=0&type=999&tx_klinkcosumitglieder_ajax[controller]=Salon&tx_klinkcosumitglieder_ajax[action]=detailjson&tx_klinkcosumitglieder_ajax[mitglied_id]=22448'
-,'https://coiffeursearch.ch/index.php?L=0&type=999&tx_klinkcosumitglieder_ajax[controller]=Salon&tx_klinkcosumitglieder_ajax[action]=detailjson&tx_klinkcosumitglieder_ajax[mitglied_id]=37938]
+,'https://coiffeursearch.ch/index.php?L=0&type=999&tx_klinkcosumitglieder_ajax[controller]=Salon&tx_klinkcosumitglieder_ajax[action]=detailjson&tx_klinkcosumitglieder_ajax[mitglied_id]=37938]'
     ]
 
     def parse(self, response):
