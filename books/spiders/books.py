@@ -10,9 +10,7 @@ class BooksSpider(scrapy.Spider):
     ]
 
     def parse(self, response):
-        yield {
-                'email': quote.xpath('//a[@data-analytics="link.contact.email"]').get()
-        }
+        response.xpath('//a[@data-analytics="link.contact.email"]').getall()
 
         next_page = response.css('ul.paginator li.pageend a::attr("href")').get()
         if next_page is not None:
