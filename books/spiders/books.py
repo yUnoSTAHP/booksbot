@@ -12,7 +12,5 @@ class BooksSpider(scrapy.Spider):
 
     def parse(self, response):
          jsonresponse = json.loads(response.text)
-
-         item = MyItem()
-         item["email"] = jsonresponse["email"]   
-         return item
+  
+         return {"email": jsonresponse["email"]}
