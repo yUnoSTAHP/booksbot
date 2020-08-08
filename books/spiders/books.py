@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-
+import json
 
 class BooksSpider(scrapy.Spider):
     name = "coiffeurvergleich"
