@@ -6,13 +6,13 @@ class BooksSpider(scrapy.Spider):
     name = "coiffeurvergleich"
     allowed_domains = ["www.coiffeurvergleich.ch"]
     start_urls = [
-        'https://www.coiffeurvergleich.ch/coiffeur.php?p=10&geschlecht=0',
+'https://coiffeursearch.ch/index.php?L=0&type=999&tx_klinkcosumitglieder_ajax[controller]=Salon&tx_klinkcosumitglieder_ajax[action]=detailjson&tx_klinkcosumitglieder_ajax[mitglied_id]=514'
+,'https://coiffeursearch.ch/index.php?L=0&type=999&tx_klinkcosumitglieder_ajax[controller]=Salon&tx_klinkcosumitglieder_ajax[action]=detailjson&tx_klinkcosumitglieder_ajax[mitglied_id]=3707'
     ]
 
     def parse(self, response):
-        for x in response.xpath('//a[@data-analytics="link.contact.email"]').getall():
-            yield {"mail": x}
-       
-        next_page = response.css('ul.paginator li.pageend a::attr("href")').get()
-        if next_page is not None:
-            yield response.follow(next_page, self.parse)
+         jsonresponse = json.loads(response.text)
+
+         item = MyItem()
+         item["email"] = jsonresponse["email"]   
+         return item
