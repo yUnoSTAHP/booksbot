@@ -13,7 +13,6 @@ class BooksSpider(scrapy.Spider):
         for x in response.xpath('//a[@data-kpi-type="email"]/span[@class="visible-print"]').getall():
             yield {"mail": x}
        
-	   //a[@class='pagination-link' and @rel="next"]
         next_page = response.css('a.pagination-link[rel="next"]::attr("href")').get()
         if next_page is not None:
             yield response.follow(next_page, self.parse)
