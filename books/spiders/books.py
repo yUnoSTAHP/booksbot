@@ -6,7 +6,7 @@ class BooksSpider(scrapy.Spider):
     name = "local massage"
     allowed_domains = ["tel.local.ch"]
     start_urls = [
-        'https://tel.local.ch/de/q?what=massage&where=schweiz',
+        'https://tel.local.ch/de/q?what=osteopathie&where=schweiz',
     ]
 
     def parse(self, response):
