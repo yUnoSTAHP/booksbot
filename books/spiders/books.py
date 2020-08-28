@@ -3,10 +3,10 @@ import scrapy
 
 
 class BooksSpider(scrapy.Spider):
-    name = "local physiotherapie"
+    name = "local hundesalon"
     allowed_domains = ["tel.local.ch"]
     start_urls = [
-        'https://tel.local.ch/de/q?what=physiotherapie&where=schweiz',
+        'https://tel.local.ch/de/q?what=hundesalon&where=schweiz',
     ]
 
     def parse(self, response):
